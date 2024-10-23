@@ -15,17 +15,17 @@
   * `Flight-Service:` This container hosts the UI program responsible for receiving and managing user data.
   * `DB-Service:` Within this container, the program manages the program's database and its associated functions.
 
-  To facilitate communication between the two containers, a named pipe is used. This setup ensures that both containers are aware of any potential issues or crashes
-  in the other container and are capable of managing such situations effectively to maintain smooth operations.
+  A named pipe is used to facilitate communication between the two containers. This setup ensures that both containers are aware of any potential issues or crashes
+  in the other container and can manage such situations effectively to maintain smooth operations.
 
   ## Usage
 
-  After initialize the whole setup, you will be presented with the following menu in the terminal window:
+  After initializing the whole setup, you will be presented with the following menu in the terminal window:
  <p align="center">
   <img src="https://github.com/RoyToledano/ReverseTicTacToe/assets/102805117/a37136ca-3db7-4b8e-99e4-0f7b8eab46e1" width="350">
   </p>
 
-  First, by selecting option 1 you wiil fetch the Database with some initial data, populating it with relevant flight information. The airport names in the Database will be represented by their respective ICAO airport codes, such as "LLBG" for Ben Gurion Airport.
+  First, by selecting option 1 you will fetch the Database with some initial data, populating it with relevant flight information. The airport names in the Database will be represented by their respective ICAO airport codes, such as "LLBG" for Ben Gurion Airport.
 
  <p align="center">
   <img src="https://github.com/RoyToledano/ReverseTicTacToe/assets/102805117/35cf4ca7-a9c7-457e-8767-20b4bf571c52" width="350">
@@ -34,7 +34,7 @@
 After fetching the Database with some initial data (using function number 1), you are free to utilize any other function provided by the FlightScanner application:
   * `Print airports incoming flights:` Choosing option 2 will prompt you to enter a list of airports' ICAO codes. After entering the codes, the application will display each airport's incoming flights.
   * `Print airport full flight schedule:` Option 3 allows you to input a single airport's ICAO code. Once entered, the application will display the full flight schedule for that airport, ordered by time of arrival/departure.
-  * `Print aircrafts full flight schedule:` Option 4 enables you to input an aircraft's ICAO24 code. Upon entering the code, the application will display the full flight schedule for that specific aircraft.
+  * `Print aircraft's full flight schedule:` Option 4 enables you to input an aircraft's ICAO24 code. Upon entering the code, the application will display the full flight schedule for that specific aircraft.
   * `Zip Database files:` Selecting option 5 will trigger the zipping of the current Database files. This process will also occur during the shutdown of both containers, ensuring that the updated Database is preserved for future use.
 
  <p align="center">
@@ -61,7 +61,7 @@ In the release window on the right-hand side, you will have two options to downl
 ### Setup manually
 
  * If the images on DockerHub are unavailable or you prefer more control over the setup process, you can choose the manual setup option.
- * After downloading this setup, you will receive a bash script and two directorys, one for the Flight-Service program and another one for the DB-Service program.
+ * After downloading this setup, you will receive a bash script and two directories, one for the Flight-Service program and another one for the DB-Service program.
  * First, navigate into the Flight-Service directory using the terminal and execute the bash script to build the corresponding Docker container for the UI program: 
    ```
    ./BuildFlightService.sh
